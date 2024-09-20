@@ -28,6 +28,7 @@ console.log("DOM Ready");
     ]
 
     function tellFortune() {
+        console.log("does this work?");
         /*This should generate a number based on how long the arcana list is */
         const arcanaChooser = Math.floor(Math.random() * majorArcana.length);
 
@@ -37,5 +38,8 @@ console.log("DOM Ready");
     }
 
     /* This should add an event listener to the center card image to trigger the fortune telling */
-    document.getElementById("changeImage").addEventListener("click", tellFortune);
+    const imageElement = document.getElementById("changeImage");
+    console.log(imageElement);
+    imageElement.addEventListener("click", tellFortune);
+
 });

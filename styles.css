@@ -1,45 +1,333 @@
-body {
-    background-color: black;
-    color: white;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
 
-header {
-    display:flex;
-    justify-content: center;
-}
+/* @import './reset.css'; */
 
-main {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5em;
-}
+@media only screen
+and (max-device-width: 767px)
+{
+    body {
+        background-image: url("background.jpg");
+        background-size:contain;
+        background-color: black;
+        color: white;
+        font-family:fantasy;
+        font-size:x-small;
+    }
 
-.pleaseText {
-    flex-direction: row-reverse;
-    width: 500px
-}
+    header {
+        display:flex;
+        justify-content: center;
+        padding: 5px;
+    }
 
-.bigBoy {
-    display: flex;
-}
+    .headerStyle {
+        background:black;
+    }
 
-.putEmInOrder {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0em 5em;
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imageTime{
+        padding: 10px;
+    }
+
+    .pleaseText {
+        flex-direction: row-reverse;
+        margin: 2px;
+        padding: 3px;
+        background: black;
+        width: 500px;
+    }
+
+    h3 {
+        margin: 2px;
+        padding: 3px;
+        background: black;
+    }
+
+    .bigBoy {
+        display: flex;
+        width:100px;
+        height: 200px;
+        padding: 30px;
+    }
+
+    .putEmInOrder {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0em 2em;
+        position: relative;
+    }
+
+    .makeEmSmall {
+        width: 50px;
+    }
+
+    .makeItMedium{
+        display: block;
+        position: relative;
+    }
+
+    .makeItMedium img {
+        background-color: black;
+        background-size: contain;
+        height: 160px;
+        width: 100px;
+        cursor: pointer;
+        z-index: 1;
+        display: block;
+    }
+
+    .makeItMedium:hover img {
+        transform: scale(1.05);
+    }
+
+    .makeItMedium::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s; /* Transition effect for the overlay */
+        z-index: 2;
+    }
     
+    .makeItMedium:hover::after {
+        opacity: 1; /* Show the overlay on hover */
+        transform: scale(1.05);
+    }
 }
 
-.makeEmSmall {
-    width: 175px;
+@media only screen
+and (min-device-width:768px)
+and (max-device-width:1224px)
+{
+    body {
+        background-image: url("background.jpg");
+        background-size:contain;
+        background-color: black;
+        color: white;
+        font-family:fantasy;
+        font-size:large;
+        text-align: center;
+    }
+
+    header {
+        display:flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .headerStyle {
+        background:black;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .imageTime{
+        padding: 20px;
+    }
+
+    .pleaseText {
+        flex-direction: row-reverse;
+        margin: 5px;
+        padding: 6px;
+        background: black;
+        width: 500px;
+    }
+
+    h3 {
+        margin: 5px;
+        padding: 6px;
+        background: black;
+    }
+
+    .bigBoy {
+        display: flex;
+        width:300px;
+        height: 480px;
+        padding: 60px;
+    }
+
+    .putEmInOrder {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0em 5em;
+    }
+
+    .makeEmSmall {
+        width: 120px;
+    }
+
+    .makeItMedium{
+        display: block;
+        position: relative;
+    }
+
+    .makeItMedium img {
+        background-color: black;
+        background-size: contain;
+        height: 320px;
+        width: 200px;
+        cursor: pointer;
+        z-index: 1;
+        display: block;
+    }
+
+    .makeItMedium:hover img {
+        transform: scale(1.05);
+    }
+
+    .makeItMedium::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s; /* Transition effect for the overlay */
+        z-index: 2;
+    }
+    
+    .makeItMedium:hover::after {
+        opacity: 1; /* Show the overlay on hover */
+        transform: scale(1.05);
+    }
 }
 
-.makeItMedium {
-    width: 300px;
+@media only screen
+and (min-width:1224px) {
+
+    body {
+        background-image: url("background.jpg");
+        background-size:contain;
+        background-color: black;
+        color: white;
+        font-family:fantasy;
+        margin: 0;
+        text-align: center;
+    }
+
+    header {
+        display:flex;
+        justify-content: center;
+    }
+
+    .headerStyle {
+        background:black;
+        padding: 20px;
+    }
+
+    h3 {
+        margin: 5px;
+        padding: 6px;
+        background: black;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5em;
+    }
+
+    .pleaseText {
+        flex-direction: row-reverse;
+        padding: 20px;
+        background: black;
+        width: 1000px
+    }
+
+    .bigBoy {
+        display: flex;
+    }
+
+    h3 {
+        margin: 5px;
+        padding: 6px;
+        background: black;
+    }
+
+    .putEmInOrder {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0em 5em;
+        position: relative;
+    }
+
+    .makeEmSmall {
+        width: 175px;
+    }
+
+    .makeItMedium{
+        display: block;
+        position: relative;
+    }
+
+    .makeItMedium img {
+        background-color: black;
+        background-size: contain;
+        height: 488px;
+        width: 300px;
+        cursor: pointer;
+        z-index: 1;
+        display: block;
+    }
+
+    .makeItMedium:hover img {
+        transform: scale(1.05);
+    }
+
+    .makeItMedium::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s; /* Transition effect for the overlay */
+        z-index: 2;
+    }
+    
+    .makeItMedium:hover::after {
+        opacity: 1; /* Show the overlay on hover */
+        transform: scale(1.05);
+    }
+
+    .randoText {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+
 }

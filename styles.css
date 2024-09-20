@@ -11,6 +11,7 @@ and (max-device-width: 767px)
         color: white;
         font-family:fantasy;
         font-size:x-small;
+        text-align: center;
     }
 
     header {
@@ -25,8 +26,10 @@ and (max-device-width: 767px)
 
     main {
         display: flex;
-        justify-content: center;
+        flex-direction: row-reverse;
+        justify-content: space-around;
         align-items: center;
+        padding: 5em;
     }
 
     .imageTime{
@@ -106,6 +109,14 @@ and (max-device-width: 767px)
         opacity: 1; /* Show the overlay on hover */
         transform: scale(1.05);
     }
+
+    .randoText {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5em;
+    }
 }
 
 @media only screen
@@ -137,6 +148,7 @@ and (max-device-width:1224px)
         flex-direction: row-reverse;
         justify-content: space-around;
         align-items: center;
+        padding: 5em;
     }
 
     .imageTime{
@@ -214,6 +226,14 @@ and (max-device-width:1224px)
     .makeItMedium:hover::after {
         opacity: 1; /* Show the overlay on hover */
         transform: scale(1.05);
+    }
+
+    .randoText {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5em;
     }
 }
 
@@ -328,6 +348,7 @@ and (min-width:1224px) {
         flex-direction: row-reverse;
         justify-content: space-around;
         align-items: center;
+        padding: 5em;
     }
 
 }

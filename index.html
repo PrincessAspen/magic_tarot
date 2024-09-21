@@ -7,13 +7,13 @@
     <title>Tarot Reading Site</title>
 </head>
 <body>
-    <div>
+    <div class="backgroundWrapper">
         <div>
-            <header>
-                <div class="headerStyle">
+            <div>
+                <header class="headerStyle">
                     Do what you will, but harm none
-                </div>
-            </header>
+                </header>
+            </div>
             <main>
                 <!-- <div class="bigBoy">
                     <img src="Tarotcardback.jpg">
@@ -24,6 +24,21 @@
                     <h3>You can click the card below to have your fortune told. Just imagine the question you want answered, and then scroll down to receive your reading.</h3>
                 </div>
             </main>
+            <form class="pleaseText">
+                <fieldset class="theField">
+                    <legend>The Bridge of Death</legend>
+                    <label for="yourName">What is your name?</label>
+                    <input type="text", name="yourName", id="yourName">
+
+                    <label for="yourQuest">What is your quest?</label>
+                    <input type="text", name="yourQuest", id="yourQuest">
+
+                    <label for="yourColor">What is your favorite color?</label>
+                    <input type="text", name="yourColor", id="yourColor">
+                    <button type="submit" id="theButton">Submit</button>
+                </fieldset>
+                <p id="goAway"></p>
+            </form>
             <div class="imageTime">
                 <div class="putEmInOrder">
                     <img id="test" src="0-the-Fool.jpg" class="makeEmSmall">

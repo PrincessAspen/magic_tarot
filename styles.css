@@ -15,12 +15,15 @@ and (max-device-width: 767px)
     header {
         display:flex;
         justify-content: center;
-        padding: 5px;
+        background: black;
+        max-width: 100px;
+        padding: 5px
     }
-
+    
     .headerStyle {
-        background:black;
-        padding: 20px
+        padding: 5px; 
+        max-width: 100px; 
+        margin: 0 auto; 
     }
 
     .backgroundWrapper {
@@ -29,6 +32,8 @@ and (max-device-width: 767px)
         background-size: 100% auto; 
         background-repeat: repeat-y; 
         min-height: 100vh; 
+        max-width: 100%;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
     }
@@ -57,6 +62,19 @@ and (max-device-width: 767px)
         padding: 3px;
         background: black;
         align-items: center;
+    }
+
+    .pleaseList {
+        flex-direction: column;
+        margin: 2px;
+        padding: 3px;
+        background: black;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .pleaseList h1 {
+        text-align: center;
     }
 
     h3 {
@@ -130,12 +148,15 @@ and (max-device-width:1224px)
     header {
         display:flex;
         justify-content: center;
-        padding: 20px;
-    }
-
-    .headerStyle {
-        background:black;
+        background: black;
+        max-width: 500px;
         padding: 20px
+    }
+    
+    .headerStyle {
+        padding: 20px; 
+        max-width: 500px; 
+        margin: 0 auto; 
     }
 
     .backgroundWrapper {
@@ -171,6 +192,19 @@ and (max-device-width:1224px)
         margin: 5px;
         padding: 6px;
         background: black;
+    }
+
+    .pleaseList {
+        flex-direction: column;
+        margin: 5px;
+        padding: 6px;
+        background: black;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .pleaseList h1{
+        text-align: center;
     }
 
     h3 {
@@ -259,9 +293,9 @@ and (min-width:1224px) {
     }
     
     .headerStyle {
-        padding: 20px; /* Space inside */
-        max-width: 500px; /* Limit the width */
-        margin: 0 auto; /* Center the content */
+        padding: 20px; 
+        max-width: 500px; 
+        margin: 0 auto; 
     }
     
 
@@ -289,6 +323,19 @@ and (min-width:1224px) {
         flex-direction: row-reverse;
         padding: 20px;
         background: black;
+    }
+
+    .pleaseList {
+        flex-direction: column;
+        margin: 5px;
+        padding: 6px;
+        background: black;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .pleaseList h1 {
+        text-align: center;
     }
 
     .bigBoy {
